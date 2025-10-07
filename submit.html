@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .upload-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 20px 0;
+            transition: border-color 0.3s ease;
+        }
+        
+        .upload-area:hover {
+            border-color: #667eea;
+        }
+        .upload-btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        
+        .upload-btn:hover {
+            background: #5a67d8;
+        }
+        
+        .submit-btn {
+            background: #48bb78;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background: #38a169;
+        }
+        #description {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .return {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <a href="index.html"><img src="icons8-multiply-50.png" class="return"></a>
+        <h1>Upload Photos</h1>
+        <form id="photoForm" enctype="multipart/form-data">
+            <div class="upload-area" id="uploadArea">
+                <p>Drag and drop photos here or</p>
+                <button type="button" class="upload-btn">
+                    Choose Files
+                </button>
+                <p style="margin-top: 10px; color: #666; font-size: 14px;">Supported formats: JPG, PNG, GIF</p>
+            </div>
+            
+            <div class="file-list" id="fileList"></div>
+            
+            <button type="submit" class="submit-btn">Upload Photos</button>
+            <input type="text" id="description" placeholder="Enter photo description">
+        </form>
+    </div>
+</body>
+</html>
