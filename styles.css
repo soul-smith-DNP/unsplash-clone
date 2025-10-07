@@ -153,8 +153,19 @@ nav ul li a:hover{
         width: 24px;
         cursor: pointer;
         transition: transform 0.2s ease;
+        position:absolute;
+        right:20px;
+        bottom:20px;
     }
-    
+    .spacer{
+        margin:auto;
+        gap:5px;
+        overflow:hidden;
+    }
+    .header-top button{
+        padding: 6px 10px;
+        font-size: 10px;
+    }
     .ham-menu img:hover{
         transform: scale(1.1);
     }
@@ -236,3 +247,4 @@ footer{
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
